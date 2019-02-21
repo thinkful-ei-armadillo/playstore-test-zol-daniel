@@ -14,8 +14,8 @@ describe('GET /apps', ()=>{
       .then(res => {
         expect(res.body).to.be.an('array');
         expect(res.body).to.not.be.empty;
-        const psApp = res.body[0];
-        expect(psApp).to.include.all.keys(['App','Category','Rating','Reviews','Size','Installs', 'Type', 'Price',]);
+        const app = res.body[0];
+        expect(app).to.include.all.keys(['App','Category','Rating','Reviews','Size','Installs', 'Type', 'Price',]);
       });
   });
 
