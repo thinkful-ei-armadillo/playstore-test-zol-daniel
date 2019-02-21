@@ -50,7 +50,7 @@ describe('GET /apps', ()=>{
 
   describe('sort by genre', () => {
 
-    it.only('should return 400 if genre is NOT acceptable', () => {
+    it('should return 400 if genre is NOT acceptable', () => {
       return request(app)
         .get('/apps')
         .query({genre: 'Invalid'})
