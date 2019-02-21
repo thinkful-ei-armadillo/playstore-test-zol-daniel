@@ -50,11 +50,11 @@ describe('GET /apps', ()=>{
 
   describe('sort by genre', () => {
 
-    it('should return 400 if genre is NOT acceptable', () => {
+    it.only('should return 400 if genre is NOT acceptable', () => {
       return request(app)
         .get('/apps')
         .query({genre: 'Invalid'})
-        .expect(400, 'Sort must be one of Action, Puzzle, Strategy, Casual, Arcade or Card');
+        .expect(400, 'Genre must be one of Action, Puzzle, Strategy, Casual, Arcade or Card');
     });
   
   
